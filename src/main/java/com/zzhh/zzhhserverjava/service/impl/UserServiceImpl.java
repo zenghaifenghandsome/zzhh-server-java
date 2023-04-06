@@ -8,19 +8,16 @@ import com.zzhh.zzhhserverjava.dto.UserListPageDTO;
 import com.zzhh.zzhhserverjava.entity.User;
 import com.zzhh.zzhhserverjava.mapper.UserMapper;
 import com.zzhh.zzhhserverjava.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-    @Autowired
-    private JavaMailSender javaMailSender;
+    //@Autowired
+    //private BCryptPasswordEncoder bCryptPasswordEncoder;
+    //@Autowired
+    //private JavaMailSender javaMailSender;
     @Override
     public User getUserByUsername(String username) {
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();

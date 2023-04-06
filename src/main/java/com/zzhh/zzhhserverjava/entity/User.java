@@ -1,6 +1,7 @@
 package com.zzhh.zzhhserverjava.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
@@ -36,21 +37,17 @@ public class User implements Serializable {
     @ApiModelProperty(value = " password ")
     private String password;
 
-    // nickname
-    @ApiModelProperty(" nickname ")
-    private String nickname;
+    // phone
+    @ApiModelProperty(value = " phone ")
+    private String phone;
 
-    // avatar
-    @ApiModelProperty(value = " avatar ")
-    private String avatar;
+    // email
+    @ApiModelProperty(value = " email ")
+    private String email;
 
-    // intro
-    @ApiModelProperty(value = " intro ")
-    private String intro;
-
-    // description
-    @ApiModelProperty(value = " description ")
-    private String description;
+    // role
+    @ApiModelProperty(value = " role ")
+    private Integer role;
 
     // create time
     @ApiModelProperty(value = " create time ")
