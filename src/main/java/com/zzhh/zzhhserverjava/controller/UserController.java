@@ -6,11 +6,9 @@ import com.zzhh.zzhhserverjava.dto.UserListPageDTO;
 import com.zzhh.zzhhserverjava.service.UserService;
 import com.zzhh.zzhhserverjava.util.Result;
 import com.zzhh.zzhhserverjava.util.ResultInfo;
+import com.zzhh.zzhhserverjava.vo.RegisterUserVo;
 import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,6 +36,13 @@ public class UserController {
             return Result.error().code(ResultInfo.NO_DATA_FOUND.getCode())
                     .message(ResultInfo.NO_DATA_FOUND.getMessage());
         }
+    }
+
+
+    @RequestMapping(value = "/registerUser",method = RequestMethod.POST)
+    public Result registerUser(@RequestBody RegisterUserVo registerUserVo){
+        userService.registerUser(registerUserVo)
+        return null;
     }
 
 

@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.zzhh.zzhhserverjava.dto.UserListPageDTO;
 import com.zzhh.zzhhserverjava.entity.User;
+import com.zzhh.zzhhserverjava.vo.RegisterUserVo;
 
 import java.util.List;
 
@@ -17,4 +18,10 @@ public interface UserService extends IService<User> {
     boolean checkLogin(String username,String password);
 
     IPage<UserListPageDTO> getUserListPage(Page<UserListPageDTO> page, String roleName, String nickname);
+
+
+    // register user
+    boolean registerUser(RegisterUserVo registerUserVo);
+
+    void sendEmail(String email);
 }

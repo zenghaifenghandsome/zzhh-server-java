@@ -8,11 +8,14 @@ import com.zzhh.zzhhserverjava.dto.UserListPageDTO;
 import com.zzhh.zzhhserverjava.entity.User;
 import com.zzhh.zzhhserverjava.mapper.UserMapper;
 import com.zzhh.zzhhserverjava.service.UserService;
+import com.zzhh.zzhhserverjava.vo.RegisterUserVo;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@EnableScheduling
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
     //@Autowired
     //private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -39,5 +42,23 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public IPage<UserListPageDTO> getUserListPage(Page<UserListPageDTO> page, String roleName, String nickname) {
         return this.baseMapper.getUserListPage(page,roleName,nickname);
+    }
+
+    @Override
+    public boolean registerUser(RegisterUserVo registerUserVo) {
+        User user = new User();
+
+        // get email
+        // get code from redis
+
+
+
+
+        return false;
+    }
+
+    @Override
+    public void sendEmail(String email) {
+
     }
 }
