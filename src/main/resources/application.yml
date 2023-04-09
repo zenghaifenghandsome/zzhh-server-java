@@ -15,8 +15,8 @@ spring:
     default-encoding: UTF-8
     host: smtp.163.com
     username: zenghaifenghandsom@163.com
-    password: niganshenmelo1
-    port: xxx
+    password: ERUBMZGVGOOLSGCN
+    port: 25
     properties:
       mail:
       smtp:
@@ -31,7 +31,7 @@ spring:
   # redis
   redis:
     database: 0
-    host: ip
+    host: localhost
     port: 6379
     password:
 

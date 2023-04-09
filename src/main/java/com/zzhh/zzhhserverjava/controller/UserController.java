@@ -41,7 +41,7 @@ public class UserController {
 
     @RequestMapping(value = "/registerUser",method = RequestMethod.POST)
     public Result registerUser(@RequestBody RegisterUserVo registerUserVo){
-        userService.registerUser(registerUserVo)
+        userService.registerUser(registerUserVo);
         return null;
     }
 

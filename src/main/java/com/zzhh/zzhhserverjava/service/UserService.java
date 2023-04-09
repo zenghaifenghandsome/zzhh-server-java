@@ -23,5 +23,5 @@ public interface UserService extends IService<User> {
     // register user
     boolean registerUser(RegisterUserVo registerUserVo);
 
-    void sendEmail(String email);
+    void sendCode(String email);
 }
